@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/array-function-in-java.iml" filepath="$PROJECT_DIR$/.idea/array-function-in-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/convert-temperature/convert-temperature.iml" filepath="$PROJECT_DIR$/convert-temperature/convert-temperature.iml" />
+      <module fileurl="file://$PROJECT_DIR$/find-index-in-array/find-index-in-array.iml" filepath="$PROJECT_DIR$/find-index-in-array/find-index-in-array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/find-max-element/find-max-element.iml" filepath="$PROJECT_DIR$/find-max-element/find-max-element.iml" />
+      <module fileurl="file://$PROJECT_DIR$/find-min-element/find-min-element.iml" filepath="$PROJECT_DIR$/find-min-element/find-min-element.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reverse-array/reverse-array.iml" filepath="$PROJECT_DIR$/reverse-array/reverse-array.iml" />
+    </modules>
+  </component>
+</project>
