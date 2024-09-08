@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" project-jdk-name="corretto-17" project-jdk-type="JavaSDK" />
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/spring-mvc/thymeleaf/product-management-thymeleaf/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-mvc/controller/timezone-maven/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-mvc/controller/email-validate-maven/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-mvc/controller/sandwich-condiments-maven/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-mvc/controller/management-customers-maven/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="corretto-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
 </project>
