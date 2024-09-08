@@ -4,18 +4,43 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/spring-mvc/controller/email-validate-gradle" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/spring-mvc/controller/email-validate-gradle" />
+          </set>
+        </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/spring-mvc/overview/currency-converter" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/spring-mvc/overview/currency-converter" />
+          </set>
+        </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/spring-mvc/overview/management-customers" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/spring-mvc/overview/management-customers" />
+          </set>
+        </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/spring-mvc/overview/spring-greeting" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/spring-mvc/overview/spring-greeting" />
+          </set>
+        </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/spring-mvc/thymeleaf/customer-management-thymeleaf" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/spring-mvc/thymeleaf/customer-management-thymeleaf" />
+          </set>
+        </option>
       </GradleProjectSettings>
     </option>
   </component>

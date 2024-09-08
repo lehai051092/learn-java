@@ -1,47 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f7bdde2c-78f2-48ca-b93e-3e7084e80728" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/controller/email-validate-gradle/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/controller/email-validate-gradle/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/controller/email-validate-gradle/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/controller/email-validate-gradle/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/controller/email-validate-maven/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/controller/email-validate-maven/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/controller/email-validate-maven/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/controller/email-validate-maven/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/overview/currency-converter/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/overview/currency-converter/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/overview/currency-converter/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/overview/currency-converter/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/overview/management-customers/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/overview/management-customers/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/overview/management-customers/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/overview/management-customers/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/overview/management-customers/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/overview/spring-greeting/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/overview/spring-greeting/.idea/artifacts/Gradle___com_example___spring_greeting_1_0_SNAPSHOT_war.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/overview/spring-greeting/.idea/artifacts/Gradle___com_example___spring_greeting_1_0_SNAPSHOT_war__exploded_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/overview/spring-greeting/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/overview/spring-greeting/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/overview/spring-greeting/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/thymeleaf/customer-management-thymeleaf/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/thymeleaf/customer-management-thymeleaf/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/thymeleaf/customer-management-thymeleaf/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/thymeleaf/customer-management-thymeleaf/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/thymeleaf/customer-management-thymeleaf/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/thymeleaf/product-management-thymeleaf/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/thymeleaf/product-management-thymeleaf/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/thymeleaf/product-management-thymeleaf/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/thymeleaf/product-management-thymeleaf/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/spring-mvc/overview/currency-converter">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/spring-mvc/overview/management-customers">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,10 +49,42 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
+    <layout>
+      <window_info id="Bookmarks" show_stripe_button="false" side_tool="true" />
+      <window_info id="Merge Requests" show_stripe_button="false" />
+      <window_info id="Commit_Guest" show_stripe_button="false" />
+      <window_info id="Pull Requests" show_stripe_button="false" />
+      <window_info id="Learn" show_stripe_button="false" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32984102" />
+      <window_info id="Commit" order="1" weight="0.25" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Profiler" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" show_stripe_button="false" />
+      <window_info anchor="bottom" id="File Transfer" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Problems" order="1" />
+      <window_info anchor="bottom" id="Problems View" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.33014113" />
+      <window_info anchor="bottom" id="Build" order="4" weight="0.33014113" />
+      <window_info anchor="bottom" id="Services" order="4" />
+      <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
+      <window_info anchor="right" id="Coverage" show_stripe_button="false" side_tool="true" />
+      <window_info anchor="right" id="Beans" />
+      <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
+      <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
+      <window_info anchor="right" id="Database" order="2" weight="0.25" />
+      <window_info anchor="right" id="Gradle" order="3" weight="0.25036126" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.25" />
+    </layout>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -78,8 +101,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1725800831849</updated>
-      <workItem from="1725800833383" duration="6000" />
+      <workItem from="1725800833383" duration="167000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
