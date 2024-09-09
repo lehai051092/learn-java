@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="/layouts/main :: head">
+    <title>Song List</title>
+</head>
+<body>
+<p>
+    <a th:href="@{/music/create}">
+        Add new music
+    </a>
+</p>
+
+<h1>Danh Sách Bài Hát Đã Upload</h1>
+<div class="notify">
+    <div th:if="${success}">
+        <span th:text="${success}"></span>
+    </div>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>Tên bài hát</th>
+        <th>Nghệ sĩ</th>
+        <th>Thể loại</th>
+        <th>File</th>
+    </tr>
+    </thead>
+   <tbody>
+   <tr th:each="song : ${song_list}">
+       <td th:text="${song.getName()}"></td>
+       <td th:text="${song.getArtist()}"></td>
+       <td th:text="${song.getTypes()}"></td>
+       <td th:text="${song.getPath()}"></td>
+   </tr>
+   </tbody>
+</table>
+
+<footer th:replace="/layouts/main :: footer"></footer>
+</body>
+</html>
