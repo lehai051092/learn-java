@@ -1,0 +1,51 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="~{/layouts/root :: head}">
+    <title th:replace="~{/layouts/root :: pageTitle}">Photo Rating List</title>
+</head>
+<body>
+<div class="notify">
+    <div th:if="${success}">
+        <span th:text="${success}"></span>
+    </div>
+</div>
+<p>
+    <a th:href="@{/review}">
+        Add new review
+    </a>
+</p>
+<table id="comments">
+    <thead>
+    <tr>
+        <th>Image</th>
+        <th>Author</th>
+        <th>Feedback</th>
+        <th>Rating</th>
+        <th>Likes</th>
+        <th>Like</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="comment : ${comments}">
+        <td>
+            <a th:href="${comment.imagePath}" th:text="${comment.imagePath}" target="_blank"></a>
+        </td>
+        <td th:text="${comment.author}"></td>
+        <td th:text="${comment.feedback}"></td>
+        <td th:text="${comment.rating}"></td>
+        <td th:text="${comment.getLikes()} + ' likes'"></td>
+        <td>
+            <a th:href="@{'/comment/' + ${comment.getId()} + '/like'}">
+                <button>Like</button>
+            </a>
+        </td>
+        <td><a th:href="@{/{id}/edit(id=${comment.id})}">edit</a></td>
+        <td><a th:href="@{/{id}/delete(id=${comment.id})}">delete</a></td>
+    </tr>
+    </tbody>
+</table>
+<footer th:replace="~{/layouts/root :: footer}"></footer>
+</body>
+</html>

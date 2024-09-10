@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:fragment="head">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title th:layoutTitle="${pageTitle}">Spring Photo of the day</title>
+
+    <style>
+        h3{background-color: blue; color: white; padding: 10px 0 10px 20px;}
+        footer{margin: 10px 0;}
+
+        #comments {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #comments td, #comments th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #comments tr:nth-child(even){background-color: #f2f2f2;}
+
+        #comments tr:hover {background-color: #ddd;}
+
+        #comments th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        input[type=text],input[type=email]{
+            width: 100%;
+            padding: 12px 0;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 300px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        #form {
+            width: 500px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .notify span{font-size: 15px; color: blue;}
+
+        .photo-container {
+            text-align: center;
+        }
+        .rating {
+            margin-top: 10px;
+        }
+        .rating input {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<footer th:fragment="footer">
+    <p>© 2024 My Website. All rights reserved.</p>
+</footer>
+<script th:fragment="script">
+    let query = 'https://api.nasa.gov/planetary/apod?api_key=Yh6WvBs9IwCybTWFjJPCIzZLZyBaFZXEfnZjMqKM';
+    let request = new XMLHttpRequest();
+    request.open('GET', query);
+    request.onload = function() {
+        if (request.status === 200) {
+            let response = JSON.parse(request.responseText);
+            document.getElementById('img-of-the-day').setAttribute('src', response.hdurl);
+            document.getElementById('image-path').value = response.hdurl;
+        }
+    };
+    request.send();
+</script>
+</body>
+</html>
