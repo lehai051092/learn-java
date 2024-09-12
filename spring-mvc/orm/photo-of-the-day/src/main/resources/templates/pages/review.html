@@ -1,0 +1,43 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="~{/layouts/root :: head}">
+    <title th:replace="~{/layouts/root :: pageTitle}">Photo Rating Form</title>
+</head>
+<body>
+<div class="notify">
+    <div th:if="${success}">
+        <span th:text="${success}"></span>
+    </div>
+</div>
+<div class="photo-container">
+    <img id="img-of-the-day" alt="img-of-the-day" style="width: 100%; height: 100%">
+    <h3>Rate this photo</h3>
+</div>
+<form th:action="@{/comment}" method="POST" th:object="${comment}">
+    <input id="image-path" type="hidden" th:field="*{imagePath}"/>
+    <label for="author">Author:</label><br>
+    <input type="text" id="author" name="author" th:field="*{author}"><br><br>
+
+    <label for="feedback">Feedback:</label><br>
+    <textarea id="feedback" name="feedback" rows="4" cols="50" th:field="*{feedback}"></textarea><br><br>
+
+    <div class="rating">
+        <label>Rating:</label><br>
+        <input type="radio" id="rating1" name="rating" value="5" th:field="*{rating}">
+        <label for="rating1">5 - Excellent</label><br>
+        <input type="radio" id="rating2" name="rating" value="4" th:field="*{rating}">
+        <label for="rating2">4 - Good</label><br>
+        <input type="radio" id="rating3" name="rating" value="3" th:field="*{rating}">
+        <label for="rating3">3 - Average</label><br>
+        <input type="radio" id="rating4" name="rating" value="2" th:field="*{rating}">
+        <label for="rating4">2 - Poor</label><br>
+        <input type="radio" id="rating5" name="rating" value="1" th:field="*{rating}">
+        <label for="rating5">1 - Terrible</label><br>
+    </div><br>
+
+    <input type="submit" value="Submit">
+</form>
+<footer th:replace="~{/layouts/root :: footer}"></footer>
+<script th:replace="~{/layouts/root :: script}"></script>
+</body>
+</html>
