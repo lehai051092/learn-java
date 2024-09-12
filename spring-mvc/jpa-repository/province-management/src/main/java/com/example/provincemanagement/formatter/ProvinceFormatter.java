@@ -1,7 +1,7 @@
 package com.example.provincemanagement.formatter;
 
 import com.example.provincemanagement.model.Province;
-import com.example.provincemanagement.service.IProvinceService;
+import com.example.provincemanagement.service.interfaces.IProvinceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.Formatter;
 import org.springframework.lang.NonNull;

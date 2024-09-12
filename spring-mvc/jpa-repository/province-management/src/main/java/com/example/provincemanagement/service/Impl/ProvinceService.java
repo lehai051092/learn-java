@@ -1,7 +1,8 @@
-package com.example.provincemanagement.service;
+package com.example.provincemanagement.service.Impl;
 
 import com.example.provincemanagement.model.Province;
 import com.example.provincemanagement.repository.IProvinceRepository;
+import com.example.provincemanagement.service.interfaces.IProvinceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

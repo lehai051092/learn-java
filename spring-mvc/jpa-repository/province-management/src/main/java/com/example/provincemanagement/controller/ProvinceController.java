@@ -2,8 +2,8 @@ package com.example.provincemanagement.controller;
 
 import com.example.provincemanagement.model.Customer;
 import com.example.provincemanagement.model.Province;
-import com.example.provincemanagement.service.ICustomerService;
-import com.example.provincemanagement.service.IProvinceService;
+import com.example.provincemanagement.service.interfaces.ICustomerService;
+import com.example.provincemanagement.service.interfaces.IProvinceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
