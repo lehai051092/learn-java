@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="~{/layout :: head}">
+    <title th:replace="~{/layout :: title}">Blog Edit</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Chỉnh sửa bài viết</h1>
+
+    <form th:action="@{/posts/update}" method="post" th:object="${post}">
+        <input type="hidden" th:field="*{id}"/>
+        <label for="title">Tiêu đề:</label>
+        <input type="text" id="title" name="title" th:field="*{title}">
+
+        <label for="summary">Tóm tắt:</label>
+        <input type="text" id="summary" name="summary" th:field="*{summary}">
+
+        <label for="content">Nội dung:</label>
+        <textarea id="content" name="content" rows="10" th:field="*{content}"></textarea>
+
+        <button type="submit">Update</button>
+    </form>
+</div>
+
+<footer th:replace="~{/layout :: footer}"></footer>
+</body>
+</html>
