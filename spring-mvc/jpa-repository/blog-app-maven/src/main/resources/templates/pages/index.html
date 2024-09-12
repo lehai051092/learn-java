@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="~{/layout :: head}">
+    <title>Blog List</title>
+</head>
+<body>
+<h1>Danh sách bài viết</h1>
+
+<div class="container" th:each="post,index : ${posts}">
+    <div class="blog-post">
+        <h2><a href="view-post.html">Bài viết đầu tiên</a></h2>
+        <p class="blog-summary">Đây là tóm tắt của bài viết đầu tiên...</p>
+        <p><a href="edit-post.html">Chỉnh sửa</a> | <a href="#">Xóa</a></p>
+    </div>
+</div>
+<footer th:replace="~{/layout :: footer}"></footer>
+</body>
+</html>

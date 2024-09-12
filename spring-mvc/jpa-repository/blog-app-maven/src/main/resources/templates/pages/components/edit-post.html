@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="~{/layout :: head}">
+    <title>Blog Edit</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Chỉnh sửa bài viết</h1>
+
+    <form action="/update-post" method="post">
+        <label for="title">Tiêu đề:</label>
+        <input type="text" id="title" name="title" value="Bài viết đầu tiên" required>
+
+        <label for="summary">Tóm tắt:</label>
+        <input type="text" id="summary" name="summary" value="Đây là tóm tắt của bài viết đầu tiên...">
+
+        <label for="content">Nội dung:</label>
+        <textarea id="content" name="content" rows="10" required>Đây là nội dung đầy đủ của bài viết. Lorem ipsum dolor sit amet...</textarea>
+
+        <button type="submit">Cập nhật bài viết</button>
+    </form>
+</div>
+
+<footer th:replace="~{/layout :: footer}"></footer>
+</body>
+</html>
