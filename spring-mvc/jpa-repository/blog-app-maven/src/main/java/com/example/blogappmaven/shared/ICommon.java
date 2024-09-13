@@ -5,7 +5,7 @@ import java.util.Optional;
 public interface ICommon<T> {
     Iterable<T> findAll();
 
-    Optional<T> findById(Long id);
+    T findById(Long id);
 
     void save(T t);
 

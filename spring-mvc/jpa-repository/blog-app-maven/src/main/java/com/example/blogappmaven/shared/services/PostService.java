@@ -24,8 +24,8 @@ public class PostService implements IPostService {
     }
 
     @Override
-    public Optional<Post> findById(Long id) {
-        return postRepository.findById(id);
+    public Post findById(Long id) {
+        return postRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Customer not found"));
     }
 
     @Override
@@ -35,16 +35,8 @@ public class PostService implements IPostService {
 
     @Override
     public void update(Long id, Post post) {
-        postRepository.findById(id).map(object -> {
-            object.setTitle(post.getTitle());
-            object.setSummary(post.getSummary());
-            object.setContent(post.getContent());
-            object.setUpdatedAt(LocalDateTime.now());
-            return postRepository.save(object);
-        }).orElseGet(() -> {
-            post.setId(id);
-            return postRepository.save(post);
-        });
+        findById(id);
+        postRepository.save(post);
     }
 
     @Override

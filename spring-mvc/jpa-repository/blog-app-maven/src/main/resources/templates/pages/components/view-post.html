@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head th:replace="~{/layout :: head}">
-    <title>Blog View</title>
+    <title th:replace="~{/layout :: title}">Blog View</title>
 </head>
 <body>
-
 <div class="container">
-    <h1>Bài viết đầu tiên</h1>
-    <p class="blog-summary">Đây là nội dung chi tiết của bài viết đầu tiên...</p>
-    <p>Đây là nội dung đầy đủ của bài viết. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <nav>
+        <a th:href="@{/posts}">Home</a>
+    </nav>
+    <h1 th:text="${post.getTitle()}"></h1>
+    <p class="blog-summary" th:text="${post.getSummary()}">Đây là nội dung chi tiết của bài viết đầu tiên...</p>
+    <p th:text="${post.getContent()}">Đây là nội dung đầy đủ của bài viết. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
 
-    <button onclick="window.location.href='edit-post.html'">Chỉnh sửa bài viết</button>
+    <a th:href="@{/posts/{id}/edit(id=${post.getId()})}" th:text="Edit"></a>
 </div>
 
 <footer th:replace="~{/layout :: footer}"></footer>

@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head th:replace="~{/layout :: head}">
-    <title>Blog Edit</title>
+    <title th:replace="~{/layout :: title}">Blog Edit</title>
 </head>
 <body>
 
 <div class="container">
     <h1>Chỉnh sửa bài viết</h1>
 
-    <form action="/update-post" method="post">
+    <form th:action="@{/posts/update}" method="post" th:object="${post}">
+        <input type="hidden" th:field="*{id}"/>
         <label for="title">Tiêu đề:</label>
-        <input type="text" id="title" name="title" value="Bài viết đầu tiên" required>
+        <input type="text" id="title" name="title" th:field="*{title}">
 
         <label for="summary">Tóm tắt:</label>
-        <input type="text" id="summary" name="summary" value="Đây là tóm tắt của bài viết đầu tiên...">
+        <input type="text" id="summary" name="summary" th:field="*{summary}">
 
         <label for="content">Nội dung:</label>
-        <textarea id="content" name="content" rows="10" required>Đây là nội dung đầy đủ của bài viết. Lorem ipsum dolor sit amet...</textarea>
+        <textarea id="content" name="content" rows="10" th:field="*{content}"></textarea>
 
-        <button type="submit">Cập nhật bài viết</button>
+        <button type="submit">Update</button>
     </form>
 </div>
 
