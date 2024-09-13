@@ -25,6 +25,9 @@
         <label for="content">Content:</label>
         <textarea id="content" name="content" rows="10" th:field="*{content}" readonly></textarea>
 
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="categoy" th:field="*{category.name}" readonly></input>
+
         <button type="submit">Remove</button>
     </form>
 </div>

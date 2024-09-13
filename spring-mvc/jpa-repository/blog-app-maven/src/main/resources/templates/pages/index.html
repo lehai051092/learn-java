@@ -6,12 +6,27 @@
 <body>
 <div class="container">
     <nav>
-        <a th:href="@{/posts}">Home</a>
-        <a th:href="@{/posts/create}">Add new post</a>
+        <a th:href="@{/posts}">Home</a> |
+        <a th:href="@{/posts/create}">Add new post</a> |
+        <a th:href="@{/categories/create}">Add new category</a> |
     </nav>
+
+    <!-- Form tìm kiếm -->
+    <form th:action="@{/posts}" method="get">
+        <input type="text" name="search" placeholder="Search posts" th:value="${search}">
+        <select name="category_name">
+            <option value="">All Categories</option>
+            <option th:each="category : ${categories}" th:value="${category.name}"
+                    th:text="${category.name}" th:selected="${category.name == category_name}">
+            </option>
+        </select>
+        <button type="submit">Search</button>
+    </form>
 </div>
+
 <h1>Post List</h1>
 
+<!-- Hiển thị message nếu có -->
 <div th:if="${message}" class="alert alert-success">
     <p th:text="${message}"></p>
 </div>
@@ -23,6 +38,7 @@
         </h2>
         <p class="blog-summary" th:text="${post.getSummary()}"></p>
         <p class="blog-content" th:text="${post.getContent()}"></p>
+        <p class="blog-category" th:text="${post.getCategory().getName()}"></p>
         <p>
             <a th:href="@{/posts/{id}/edit(id=${post.getId()})}" th:text="Edit"></a>
             |
@@ -30,7 +46,22 @@
         </p>
         <hr>
     </div>
+
+    <!-- Phân trang -->
+    <div th:if="${posts.hasContent()}" class="pagination">
+        <span th:if="${posts.hasPrevious()}">
+            <a th:href="@{/posts(page=${posts.number - 1}, search=${search}, category_name=${category_name})}">Previous</a>
+        </span>
+        <span th:each="i : ${#numbers.sequence(1, posts.totalPages)}">
+            <a th:href="@{/posts(page=${i - 1}, search=${search}, category_name=${category_name})}"
+               th:text="${i}" th:classappend="${posts.number + 1 == i} ? 'active' : ''"></a>
+        </span>
+        <span th:if="${posts.hasNext()}">
+            <a th:href="@{/posts(page=${posts.number + 1}, search=${search}, category_name=${category_name})}">Next</a>
+        </span>
+    </div>
 </div>
+
 <footer th:replace="~{/layout :: footer}"></footer>
 </body>
 </html>

@@ -9,8 +9,9 @@
         <a th:href="@{/posts}">Home</a>
     </nav>
     <h1 th:text="${post.getTitle()}"></h1>
-    <p class="blog-summary" th:text="${post.getSummary()}">Đây là nội dung chi tiết của bài viết đầu tiên...</p>
-    <p th:text="${post.getContent()}">Đây là nội dung đầy đủ của bài viết. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <p class="blog-summary" th:text="${post.getSummary()}"></p>
+    <p th:text="${post.getContent()}"></p>
+    <p>Category: <span th:text="${post.getCategory().getName()}"></span></p>
 
     <a th:href="@{/posts/{id}/edit(id=${post.getId()})}" th:text="Edit"></a>
 </div>

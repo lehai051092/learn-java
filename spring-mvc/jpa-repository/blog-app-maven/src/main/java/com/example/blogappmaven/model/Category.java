@@ -3,22 +3,20 @@ package com.example.blogappmaven.model;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
-@Table(name = "posts")
-public class Post {
+@Table(name = "categories")
+public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String title;
+    @Column(nullable = false, unique = true)
+    private String name;
 
-    @Column()
-    private String summary;
-
-    @Column(columnDefinition = "TEXT")
-    private String content;
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+    private List<Post> posts;
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
@@ -26,17 +24,11 @@ public class Post {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "category_id")
-    private Category category;
+    public Category() {}
 
-    public Post() {}
-
-    public Post(String title, String summary, String content, Category category) {
-        this.title = title;
-        this.summary = summary;
-        this.content = content;
-        this.category = category;
+    public Category(String name, List<Post> posts) {
+        this.name = name;
+        this.posts = posts;
         this.createdAt = LocalDateTime.now();
         this.updatedAt = LocalDateTime.now();
     }
@@ -49,28 +41,20 @@ public class Post {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getSummary() {
-        return summary;
+    public List<Post> getPosts() {
+        return posts;
     }
 
-    public void setSummary(String summary) {
-        this.summary = summary;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
     }
 
     public LocalDateTime getCreatedAt() {
@@ -97,13 +81,5 @@ public class Post {
     @PreUpdate
     protected void onUpdate() {
         this.updatedAt = LocalDateTime.now();
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
     }
 }
