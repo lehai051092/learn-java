@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${page_title}">Online Flower Shop</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav th:fragment="nav">
+    <div class="container">
+        <ul>
+            <li><a th:href="@{/products}">Home</a></li>
+            <li><a th:href="@{/products/create}">Add new product</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main th:fragment="content">
+    <div class="container">
+        <!-- Nội dung trang sẽ được chèn vào đây -->
+        <div th:insert="~{::content}"></div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer th:fragment="footer">
+    <div class="container">
+        <p>&copy; 2024 Online Flower Shop. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="~{layout :: head}"></head>
+<body>
+<nav th:replace="~{layout :: nav}"></nav>
+<main th:fragment="content">
+    <div class="container product-detail">
+        <div class="product-info">
+            <h2 th:text="${product.get().getName()}">Product Name</h2>
+            <p class="price">
+                Giá mới: <span th:text="${product.get().price} + ' đ'">Price</span>
+            </p>
+            <form th:action="@{/products/{id}/add-to-cart(id=${product.get().getId()})}" method="post">
+                <button type="submit" class="btn">Mua ngay</button>
+            </form>
+        </div>
+    </div>
+</main>
+<footer th:replace="~{layout :: footer}"></footer>
+</body>
+</html>

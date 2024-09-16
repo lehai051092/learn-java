@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="~{layout :: head}"></head>
+<body>
+<!-- Thay thế phần tử navigation -->
+<nav th:replace="~{layout :: nav}"></nav>
+
+<!-- Nội dung chính của trang -->
+<main th:fragment="content">
+    <h2>Giỏ hàng của bạn</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Giá</th>
+            <th>Thao tác</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item : ${cart.items}">
+            <td th:text="${item.product.name}">Product Name</td>
+            <td>
+                <a th:href="@{/cart/decrease/{id}(id=${item.product.id})}">-</a>
+                <span th:text="${item.quantity}">1</span>
+                <a th:href="@{/cart/increase/{id}(id=${item.product.id})}">+</a>
+            </td>
+            <td th:text="${item.totalPrice} + ' đ'">Price</td>
+            <td><a th:href="@{/cart/remove/{id}(id=${item.product.id})}" class="btn-remove">X</a></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="3">Tổng cộng:</td>
+            <td th:text="${cart.getTotalPrice()} + ' đ'">0</td>
+        </tr>
+        </tfoot>
+    </table>
+</main>
+
+<!-- Thay thế phần tử footer -->
+<footer th:replace="~{layout :: footer}"></footer>
+</body>
+</html>

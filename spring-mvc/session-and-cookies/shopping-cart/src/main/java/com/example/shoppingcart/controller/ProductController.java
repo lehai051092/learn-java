@@ -28,15 +28,16 @@ public class ProductController {
 
     @GetMapping
     public ModelAndView getProducts() {
-        ModelAndView modelAndView = new ModelAndView("index");
+        ModelAndView modelAndView = new ModelAndView("pages/product/index");
         Iterable<Product> products = productService.findAll();
+        modelAndView.addObject("page_title", "Product List");
         modelAndView.addObject("products", products);
         return modelAndView;
     }
 
     @GetMapping("create")
     public ModelAndView viewCreate() {
-        ModelAndView modelAndView = new ModelAndView("create");
+        ModelAndView modelAndView = new ModelAndView("pages/product/create");
         modelAndView.addObject("product", new Product());
         return modelAndView;
     }
@@ -49,7 +50,7 @@ public class ProductController {
 
     @GetMapping("{id}/view")
     public ModelAndView viewProduct(@PathVariable Long id) {
-        ModelAndView modelAndView = new ModelAndView("product");
+        ModelAndView modelAndView = new ModelAndView("pages/product/view");
         Optional<Product> product = productService.findById(id);
         modelAndView.addObject("product", product);
         return modelAndView;
@@ -59,7 +60,7 @@ public class ProductController {
     public String addToCart(@PathVariable Long id, @SessionAttribute("cart") Cart cart) {
         Optional<Product> product = productService.findById(id);
         if (product.isEmpty()) {
-            return "error";
+            return "pages/common/error";
         }
 
         cart.addProduct(product.get());

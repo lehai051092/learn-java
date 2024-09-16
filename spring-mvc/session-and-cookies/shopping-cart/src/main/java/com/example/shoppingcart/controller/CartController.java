@@ -22,7 +22,7 @@ public class CartController {
 
     @GetMapping
     public ModelAndView index(@SessionAttribute("cart") Cart cart) {
-        ModelAndView modelAndView = new ModelAndView("cart");
+        ModelAndView modelAndView = new ModelAndView("pages/cart/index");
         modelAndView.addObject("cart", cart);
         return modelAndView;
     }
@@ -38,6 +38,13 @@ public class CartController {
     public String decreaseQuantity(@PathVariable Long id, @SessionAttribute("cart") Cart cart) {
         Optional<Product> product = productService.findById(id);
         product.ifPresent(cart::decreaseProduct);
+        return "redirect:/cart";
+    }
+
+    @GetMapping("remove/{id}")
+    public String removeItem(@PathVariable Long id, @SessionAttribute("cart") Cart cart) {
+        Optional<Product> product = productService.findById(id);
+        product.ifPresent(cart::removeProduct);
         return "redirect:/cart";
     }
 }

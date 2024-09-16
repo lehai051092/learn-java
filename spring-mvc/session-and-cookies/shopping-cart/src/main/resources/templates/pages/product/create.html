@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="~{layout :: head}"></head>
+<body>
+<!-- Navigation Bar -->
+<nav th:replace="~{layout :: nav}"></nav>
+
+<!-- Main Content -->
+<main th:fragment="content">
+    <h1>Product Create Form</h1>
+
+    <div class="container">
+        <form th:action="@{/products/create}" method="post" th:object="${product}">
+            <!-- Hidden input for Product ID -->
+            <input type="hidden" th:field="*{id}" />
+
+            <!-- Product Name -->
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" th:field="*{name}" class="form-control" required>
+            </div>
+
+            <!-- Product Price -->
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="text" id="price" name="price" th:field="*{price}" class="form-control" required>
+            </div>
+
+            <!-- Product Description -->
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="5" th:field="*{description}" class="form-control" required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn">Create</button>
+        </form>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer th:replace="~{layout :: footer}"></footer>
+
+</body>
+</html>

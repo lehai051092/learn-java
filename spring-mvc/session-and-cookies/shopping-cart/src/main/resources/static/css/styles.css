@@ -1,0 +1,130 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background-color: #f76c6c;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Navigation */
+nav {
+    background-color: #333;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    color: white;
+    padding: 14px 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+/* Main content */
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Product list */
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.product-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 2px 2px 8px #888;
+}
+.product-image img {
+    max-width: 100%;
+    height: auto;
+}
+.btn {
+    background-color: #f76c6c;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #f44336;
+}
+
+/* Cart table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+.btn-remove {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-remove:hover {
+    color: darkred;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Form Control */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Submit Button */
+.btn {
+    background-color: #f76c6c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #f44336;
+}

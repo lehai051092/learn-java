@@ -36,6 +36,13 @@ public class Cart {
         }
     }
 
+    public void removeProduct(Product product) {
+        CartItem cartItem = findCartItem(product.getId());
+        if (cartItem != null) {
+            items.remove(cartItem);
+        }
+    }
+
     public List<CartItem> getItems() {
         return items;
     }
