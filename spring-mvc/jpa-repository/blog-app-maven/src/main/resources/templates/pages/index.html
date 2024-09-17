@@ -38,7 +38,7 @@
         </h2>
         <p class="blog-summary" th:text="${post.getSummary()}"></p>
         <p class="blog-content" th:text="${post.getContent()}"></p>
-        <p class="blog-category" th:text="${post.getCategory().getName()}"></p>
+        <p class="blog-category" th:text="${post.getCategory() != null ? post.getCategory().getName() : 'No Category'}"></p>
         <p>
             <a th:href="@{/posts/{id}/edit(id=${post.getId()})}" th:text="Edit"></a>
             |

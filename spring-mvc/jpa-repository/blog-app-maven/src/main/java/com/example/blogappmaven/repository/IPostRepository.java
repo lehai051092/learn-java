@@ -11,19 +11,19 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface IPostRepository extends JpaRepository<Post, Long> {
-    // Tìm kiếm bài viết theo tiêu đề, bao gồm danh mục
-    @Query("SELECT p FROM Post p JOIN FETCH p.category WHERE p.title LIKE %:title%")
+    // Tìm kiếm bài viết theo tiêu đề và bao gồm danh mục (với phân trang)
+    @Query("SELECT p FROM Post p LEFT JOIN FETCH p.category WHERE p.title LIKE %:title%")
     Page<Post> findByTitleContaining(@Param("title") String title, Pageable pageable);
 
-    // Tìm kiếm bài viết theo danh mục, bao gồm danh mục
-    @Query("SELECT p FROM Post p JOIN FETCH p.category WHERE p.category = :category")
+    // Tìm kiếm bài viết theo danh mục (với phân trang)
+    @Query("SELECT p FROM Post p LEFT JOIN FETCH p.category WHERE p.category = :category")
     Page<Post> findByCategory(@Param("category") Category category, Pageable pageable);
 
-    // Tìm kiếm bài viết theo tiêu đề và danh mục, bao gồm danh mục
-    @Query("SELECT p FROM Post p JOIN FETCH p.category WHERE p.title LIKE %:title% AND p.category = :category")
+    // Tìm kiếm bài viết theo tiêu đề và danh mục (với phân trang)
+    @Query("SELECT p FROM Post p LEFT JOIN FETCH p.category WHERE p.title LIKE %:title% AND p.category = :category")
     Page<Post> findByTitleContainingAndCategory(@Param("title") String title, @Param("category") Category category, Pageable pageable);
 
-    // Tìm tất cả các bài viết, bao gồm danh mục
-    @Query("SELECT p FROM Post p JOIN FETCH p.category")
+    // Tìm tất cả các bài viết bao gồm danh mục (với phân trang)
+    @Query("SELECT p FROM Post p LEFT JOIN FETCH p.category")
     Page<Post> findAllWithCategory(Pageable pageable);
 }

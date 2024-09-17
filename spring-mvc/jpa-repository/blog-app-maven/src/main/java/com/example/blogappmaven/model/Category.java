@@ -1,5 +1,6 @@
 package com.example.blogappmaven.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -15,7 +16,8 @@ public class Category {
     @Column(nullable = false, unique = true)
     private String name;
 
-    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonManagedReference
     private List<Post> posts;
 
     @Column(name = "created_at", nullable = false, updatable = false)
@@ -26,9 +28,8 @@ public class Category {
 
     public Category() {}
 
-    public Category(String name, List<Post> posts) {
+    public Category(String name) {
         this.name = name;
-        this.posts = posts;
         this.createdAt = LocalDateTime.now();
         this.updatedAt = LocalDateTime.now();
     }

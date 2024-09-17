@@ -1,0 +1,11 @@
+### GET categories
+http://localhost:8080/api/categories
+
+### GET posts
+http://localhost:8080/api/posts
+
+### GET posts by category id
+http://localhost:8080/api/posts/category/1
+
+### GET post detail
+http://localhost:8080/api/posts/3

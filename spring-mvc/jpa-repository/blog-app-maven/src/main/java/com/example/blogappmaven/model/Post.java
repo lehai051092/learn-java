@@ -1,5 +1,6 @@
 package com.example.blogappmaven.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -14,7 +15,7 @@ public class Post {
     @Column(nullable = false)
     private String title;
 
-    @Column()
+    @Column
     private String summary;
 
     @Column(columnDefinition = "TEXT")
@@ -26,8 +27,9 @@ public class Post {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
+    @JsonBackReference
     private Category category;
 
     public Post() {}

@@ -3,15 +3,14 @@ package com.example.blogappmaven.shared.services;
 import com.example.blogappmaven.model.Category;
 import com.example.blogappmaven.repository.ICategoryRepository;
 import com.example.blogappmaven.shared.interfaces.ICategoryService;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class CategoryService implements ICategoryService {
     private final ICategoryRepository categoryRepository;
 
