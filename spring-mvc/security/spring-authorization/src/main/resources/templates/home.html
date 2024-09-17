@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+</head>
+<body>
+<h1 th:text="${message}">Home Page</h1>
+<a th:href="@{/login}">Login</a> |
+<a th:href="@{/register}">Register</a> |
+<a th:href="@{/admin}">admin</a> |
+<a th:href="@{/user}">user</a>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Home</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<h2>Welcome, User!</h2>
+<p>This is the user home page.</p>
+
+<p th:if="${username}">
+    You are logged in as <strong th:text="${username}"></strong>
+</p>
+
+<a th:href="@{/logout}" th:method="post">Logout</a>
+</body>
+</html>
